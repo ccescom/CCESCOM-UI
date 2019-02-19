@@ -1,0 +1,380 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+.nav-text{
+    color: #FFFFFF;	
+    font-family: Lato;	
+    font-size: 20px;	
+    line-height: 20px;	
+    display: inline;
+    text-align: center;
+}
+
+.font-biryani{
+    font-family: 'Biryani', sans-serif;
+}
+
+.font-lato{
+    font-family: 'Lato';
+}
+
+body{
+    font-family: 'Lato'; 
+    background-color: #AF2440;
+}
+.vh-100{
+    height:100vh;
+}
+
+.position-fixed{
+    position:fixed;
+}
+.position-relative{
+    position: relative;
+}
+.top-42{
+    top:42%;
+}
+.bottom-50{
+    bottom:50%;
+}
+.custm-gery-1{
+    color: #9B9B9B;
+}
+.custm-gery-2{
+    color:#4A4A4A;
+}
+.custm-gery-3{
+    color:#797979;
+}
+.custm-grey-4{
+    background-color:#808080;
+}
+.custm-grey-5{
+    color:#8B8A84
+}
+.text-light-green{
+    color:#3ABFAD;
+}
+.top-27{
+    top:-20%;
+}
+.image-details-bg{
+    background-color:#EDEAE1;
+}
+.custm-circle{
+    width:18px;
+    height:18px;
+    padding:1px;
+}
+.border-after{
+    border-left:1px solid red;
+}
+.or-color{
+    color: #7F7B81;
+}
+.color-black{
+    color:#000;
+}
+.process-btn{
+    background-color: #04B491;
+}
+.reset-btn-border{
+    border: 1px solid #C1C1C1 !important;
+}
+.height-38{
+    height:38px;
+}
+.yellow-bg{
+    background-color: #FFDF20;
+}
+.grey-bg{
+    background-color: #F5F5F5;
+}
+.letter-spacing-7{
+    letter-spacing:7.73px;
+}
+.letter-spacing-07{
+    letter-spacing: 0.77px;
+}
+.letter-spacing-3{
+    letter-spacing:3.55px;
+}
+.letter-spacing-1{
+    letter-spacing:1.33px;
+}
+.letter-spacing-2{
+    letter-spacing: 2.93px;
+}
+.font-size12{
+    font-size:12px;
+}
+.font-size18{
+    font-size:18px;
+}
+
+.font-size16{
+    font-size:16px;
+}
+
+.font-size10{
+    font-size:10px;
+}
+.border-radius-19{
+    border-radius:19px;
+}
+.border-radius-30{
+    border-radius:30px;
+}
+.left-23{
+    left:23%;
+}
+.font-size-36{
+    font-size:36px;
+}
+.font-size14{
+    font-size:14px;
+}
+.font-size18{
+    font-size:18px;
+}
+.font-weight-800{
+    font-weight: 800 !important;
+}
+.width-70{
+    width:70%;
+}
+.margin-neg{
+    margin-top:-13%;
+}
+
+.w-82{
+    width:82px;
+}
+.h-82{
+    height:82px;
+}
+.margin-top-30{
+    margin-top:30px;
+}
+
+.margin-top-6{
+    margin-top:6%;
+}
+
+.marfin-neg-25{
+    margin-top:-25px;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.column {
+    flex: 25%;
+    max-width: 25%;
+  }
+.scroll-class{
+    max-height:500px;
+    overflow-y:auto;
+}
+.z-index-999{
+    z-index:9999;
+}
+.font-weight-300{
+    font-weight:300;
+}
+.border-bottem-black{
+    border-bottom:3px solid #1B1B1B !important;
+}
+.top-20{
+    top:20%;
+}
+.fontsize-24{
+    font-size:24px;
+}
+/*upload button*/
+.upload {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+     z-index: -1;
+}
+.upload-border{
+    border:1px dashed #C5BBB8;
+    border-radius:8px;
+}
+.upload-bg{
+    background-color: rgba(202,193,193,0.1);
+}
+  /*custom scroll bar */
+div ::-webkit-scrollbar {
+    width: 8px;
+}
+div ::-webkit-scrollbar-track {
+    border-radius: 2px;
+    border: 1px solid #ddd;
+}
+div ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color:#979797;
+    opacity:0.5;
+}
+
+.bg-color-main{
+    background-color: #AF2440;
+}
+
+.logo{
+    height: 50%;
+}
+
+.landing-page{
+    background-image: url('../img/bg.jpg');
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.card{
+    height: 388px;
+    width: 528px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25);
+    background-color: rgba(175, 36, 64, 0.3)
+}
+
+.message{
+    margin-top: 15%;
+}
+
+.login-button{
+    border: 1px solid #FFF;
+    border-radius: 73px;
+    height: 25px;
+    width: 100px;
+    background-color: #FFF;
+    color:rgba(175, 36, 64, 1)
+}
+
+.menu-display{
+    display: none!important;
+}
+
+.login-input{
+    border-radius: 20px;
+}
+
+.landing-message {	
+    height: 120px;	
+    width: 490px;	
+    color: #000;	
+    font-family: Lato;	
+    font-size: 50px;	
+    font-weight: bold;	
+    line-height: 60px;	
+    text-align: center;
+    margin-top: 10%;
+}
+
+.dropdown-item{
+    background-color: #962037;
+    color: #FFF;
+}
+
+.dropdown-menu{
+    border: 0px;
+    background-color: transparent;
+}
+
+.region-show{
+    visibility: hidden;
+}
+
+.card-title{
+    width: auto;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: none!important;
+    height: 120px;
+}
+
+.card-farmers{
+    border-radius: 5px;
+    width: 58%;
+    margin-left: 1%;
+    background-color: #FFFFFF;
+    box-shadow: none!important;
+    height: 420px;
+}
+
+.card-lines{
+    margin-left: 1%;
+    width: 39%;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: none!important;
+    height: 420px;
+}
+
+.ml-8{
+    margin-left: 2rem!important;
+}
+
+.summary{
+    background-color: #ECF1F6;
+}
+
+.w-95{
+    width: 95%!important;
+}
+
+.mt-200{
+    margin-top: 150px
+}
+
+.footer{
+    margin-top: 600px;
+}   
+
+.bg-footer{
+    background-color:  rgba(0, 0, 0, 0.3);
+    height: 60px;
+    color:#FFF;
+    font-family: 'Lato'
+}
+
+.nav-link:hover{
+    color: #000
+}
+
+.indicator-title{
+    margin-left:4%;
+    font-size: 24px;
+}
+
+.indicator-region{
+    font-size:16px;
+    margin-top: 1%;
+}
+
+.filter-section{
+    height: 50px;
+}
+
+

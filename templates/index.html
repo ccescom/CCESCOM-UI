@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body_class %}landing-page{% endblock %}
+{% block menu_show %}menu-display{% endblock %}
+{% block region_show %} region-show {% endblock %}
+{% block login_show %}navbar-collapse{% endblock %}
+{% block cc_logo %}static/img/microsoft-logo.svg{% endblock %}
+
+
+{% block body %}
+    <section class="container-fluid p-0 position-fixed w-100">
+           <div class="message text-center align-self-center w-60">
+               <div class="row mx-0 mt-3 justify-content-left">
+                   <div class="col-12 col-sm-12 col-md-8">
+                       <span class="landing-message">
+                            ALL LIVES <br/> HAVE EQUAL VALUE
+                       </span>
+                   </div>
+               </div>
+           </div>
+    </section>
+{% endblock %}

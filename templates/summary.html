@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body_class %}summary-page{% endblock %}
+{% block login_show %}menu-display{% endblock %}
+{% block menu_show %}navbar-collapse{% endblock %}
+{% block cc_logo %}static/img/microsoft-logo.svg{% endblock %}
+
+{% block body %}
+    <section class="container-fluid mt-3 ml-8 p-0 position-fixed w-95">
+            <div class="card-title mb-0">
+                    <div class="d-flex row">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-4 mb-xl-0">
+                                    <div class="card-title">
+                                        <div class="d-flex row">
+                                                <div class="col-2 pr-0 text-center mt-2">
+                                                        <img src="static/img/water-filter.png">
+                                                </div>
+                                                <div class="col-10 pr-0 mt-4">
+                                                        <h6 class="text-dark font-weight-bold">Number of Farmers in the Sector</h6>
+                                                        <div class="h4 font-weight-bold">
+                                                            1200
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </div>  
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-4 mb-xl-0">
+                                    <div class="card-title">
+                                        <div class="d-flex row">
+                                                <div class="col-2 pr-0 text-center mt-2">
+                                                        <img src="static/img/water-filter.png">
+                                                </div>
+                                                <div class="col-10 pr-0 mt-4">
+                                                        <h6 class="text-dark font-weight-bold">Number of Distribution Line in the Sector</h6>
+                                                        <div class="h4 font-weight-bold">
+                                                            10
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </div>         
+                    </div>
+            </div>    
+    </section>
+    <section class="container-fluid  mt-200 ml-8 p-0 position-fixed w-95">
+        <div class="d-flex row">
+                <div class="sub-indicators card-farmers">
+                        <div class="d-flex row">
+                                <span class="indicator-title text-center text-dark font-weight-bold">Farmers List</span>   
+                                <span class="indicator-region">  -- Banglore Rural 0001</span> 
+                        </div>
+                </div>
+                <div class="sub-indicators card-lines ">
+                        <div class="d-flex row">
+                                <span class="indicator-title text-center text-dark font-weight-bold">Distribution Line List </span> 
+                                <span class="indicator-region"  >-- Banglore Rural 0001</span> 
+                        </div>
+                </div>
+        </div>        
+    </section>
+{% endblock %}

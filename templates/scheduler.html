@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body_class %}summary-page{% endblock %}
+{% block login_show %}menu-display{% endblock %}
+{% block menu_show %}navbar-collapse{% endblock %}
+{% block cc_logo %}static/img/microsoft-logo.svg{% endblock %}
+
+{% block body %}
+    <section class="container-fluid mt-3 ml-8 p-0 position-fixed w-95 filter-section">  
+            <nav class="navbar navbar-expand-lg bg-color-main pr-4 z-index-999">
+                    <div class="f{% block region_show %} {% endblock %} orm-group d-flex mb-0">
+                            <div class="dropdown bootstrap-select">
+                                <button class="btn dropdown-toggle color_button_blue sp_dropdown" name="dropdowndistrict" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Month
+                                </button>
+                                <div class="dropdown-overflow-y dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <span class="dropdown-item">
+                                            <input type="search" class="search-district form-control input-xs drop_search" id="searchdistrict" aria-labelledby="searchdistrict" placeholder="Search" />
+                                    </span>
+                                    <div class="dropdown-item district-data " href="" data-val="">
+                                        Banglore Rural - 001
+                                    </div>
+                                    <div class="dropdown-item district-data " href="" data-val="">
+                                        Banglore Rural - 002
+                                    </div>
+                                    <div class="dropdown-item district-data " href="" data-val="">
+                                        Banglore Rural - 003 
+                                    </div>
+                      
+                                
+                                </div>
+                            </div>
+                    </div>  
+            </nav>
+    </section>
+    
+{% endblock %}
