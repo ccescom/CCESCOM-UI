@@ -7,63 +7,41 @@
         <title>CC</title>
         {% assets "css_all" %}
 		    <link rel="stylesheet" href="{{ ASSET_URL }}"> 
-        {% endassets %}
-
-        
+        {% endassets %}     
     </head>
     <body class="{% block body_class %}{% endblock %} vh-100">
             <nav class="navbar navbar-expand-lg bg-color-main pr-4 z-index-999">
                     <a class="navbar-brand flex-column" href="{{ url_for('index') }}">
                       <img  height="50" src="static/img/cc.png" alt="CC logo" />
                     </a>
-                    <div class="f{% block region_show %} {% endblock %} orm-group d-flex mb-0">
-                            <div class="dropdown bootstrap-select">
-                                <button class="btn dropdown-toggle color_button_blue sp_dropdown" name="dropdowndistrict" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        CCESCOM SECTOR
-                                </button>
-                                <div class="dropdown-overflow-y dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <span class="dropdown-item">
-                                            <input type="search" class="search-district form-control input-xs drop_search" id="searchdistrict" aria-labelledby="searchdistrict" placeholder="Search" />
-                                    </span>
-                                    <div class="dropdown-item district-data " href="" data-val="">
-                                        Banglore Rural - 001
-                                    </div>
-                                    <div class="dropdown-item district-data " href="" data-val="">
-                                        Banglore Rural - 002
-                                    </div>
-                                    <div class="dropdown-item district-data " href="" data-val="">
-                                        Banglore Rural - 003 
-                                    </div>
-                      
-                                
-                                </div>
-                            </div>
+                    <div class="{% block region_show %} {% endblock %} form-group d-flex mb-0">
+                            
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="{% block menu_show %} {% endblock %} collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav ml-auto h4 mr-5">
-                        <li class="nav-item active font-lato pr-5">
-                          <a class="nav-link nav-text letter-spacing-1 font-lato font-size16" href="/summary">Summary<span class="sr-only">(current)</span></a>
+                        <li class="nav-item  font-lato pr-5">
+                          <a class="nav-link {% block summary_active %} {% endblock %} nav-text letter-spacing-1 font-lato font-size16" href="/summary">Summary<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  font-lato pr-5">
+                          <a class="nav-link {% block scheduler_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="/scheduler">Electricity Scheduler</a>
+                        </li>
+                        <li class="nav-item  font-lato pr-5">
+                          <a class="nav-link {% block configuration_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="">Configuration</a>
                         </li>
                         <li class="nav-item font-lato pr-5">
-                          <a class="nav-link nav-text letter-spacing-1  font-size16" href="/scheduler">Electricity Scheduler</a>
+                            <a class="nav-link {% block request_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="">Farmers Request</a>
                         </li>
-                        <li class="nav-item font-lato pr-5">
-                          <a class="nav-link nav-text letter-spacing-1  font-size16" href="">Configuration</a>
-                        </li>
-                        <li class="nav-item font-lato pr-5">
-                            <a class="nav-link nav-text letter-spacing-1  font-size16" href="">Farmers Request</a>
-                        </li>
-                        <li class="nav-item font-lato">
-                                <a class="nav-link nav-text letter-spacing-1  font-size16" href="">Analysis</a>
+                        <li class="nav-item  font-lato">
+                                <a class="nav-link {% block analysis_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="">Analysis</a>
                             </li>
                       </ul>
                     </div>
                     <div class="{% block login_show %} {% endblock %} collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto h4 mr-5">
-                              <li class="nav-item active font-lato pr-2">
+                              <li class="nav-item  font-lato pr-2">
                                 <span class="nav-link nav-text letter-spacing-1 font-lato font-size16 ">User ID</span>
                               </li>
                               <li class="nav-item font-lato pr-2">
@@ -79,26 +57,9 @@
                                       <button class="login-button letter-spacing-1  font-size16" onclick="login()">Login</button>
                                   </li>
                             </ul>
-                    </div>
-
-                   
+                    </div>        
             </nav>
             {% block body -%}{%- endblock %}
-            <section class="footer text-right fixed">
-                    <div id="design_footer_height"></div>
-                    <div class="bg-footer px-5 py-2">
-                      <div class="row">
-                        <div class="col-md-6" id="footer_text">
-                         
-                        </div>
-                        <div class="col-md-6">
-                          Government Of India (Ministry Of Power)
-                        </div>
-                      </div>
-                    </div>
-            </section>
-            
-
             {% assets "js_all" %}
   		        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
 

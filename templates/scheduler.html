@@ -3,34 +3,157 @@
 {% block login_show %}menu-display{% endblock %}
 {% block menu_show %}navbar-collapse{% endblock %}
 {% block cc_logo %}static/img/microsoft-logo.svg{% endblock %}
+{% block scheduler_active %} active {% endblock %}
 
 {% block body %}
-    <section class="container-fluid mt-3 ml-8 p-0 position-fixed w-95 filter-section">  
-            <nav class="navbar navbar-expand-lg bg-color-main pr-4 z-index-999">
-                    <div class="f{% block region_show %} {% endblock %} orm-group d-flex mb-0">
-                            <div class="dropdown bootstrap-select">
-                                <button class="btn dropdown-toggle color_button_blue sp_dropdown" name="dropdowndistrict" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Month
-                                </button>
-                                <div class="dropdown-overflow-y dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <span class="dropdown-item">
-                                            <input type="search" class="search-district form-control input-xs drop_search" id="searchdistrict" aria-labelledby="searchdistrict" placeholder="Search" />
-                                    </span>
-                                    <div class="dropdown-item district-data " href="" data-val="">
-                                        Banglore Rural - 001
-                                    </div>
-                                    <div class="dropdown-item district-data " href="" data-val="">
-                                        Banglore Rural - 002
-                                    </div>
-                                    <div class="dropdown-item district-data " href="" data-val="">
-                                        Banglore Rural - 003 
-                                    </div>
-                      
-                                
+    <section class="container-fluid mt-3 ml-8 p-0  w-95">  
+        <div class="card-title mb-0">
+            <div class="d-flex row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 mb-xl-0">
+                            <div class="card-title">
+                                <div class="d-flex row">
+                                        <div class="col-2 pr-0 text-center mt-2 ml-5">
+                                                <img src="static/img/Transformer.png">
+                                        </div>
+                                        <div class="col-8 pr-0 ">
+                                                <div class="dropdown scheduler-filters ml-5">
+                                                        <button class="btn grey-bg dropdown-toggle" type="button" id="dropdownYearButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                          2019
+                                                        </button>
+                                                        <div class="dropdown-menu year-menu" aria-labelledby="dropdownYearButton">
+                                                          <a class="dropdown-item" href="#">2018</a>
+                                                          <a class="dropdown-item" href="#">2020</a>
+                                                          <a class="dropdown-item" href="#">2021</a>
+                                                          <a class="dropdown-item" href="#">2022</a>
+                                                          <a class="dropdown-item" href="#">2023</a>
+                                                         
+                                                        </div>
+                                                </div>
+                                                <div class="dropdown scheduler-filters ml-5">
+                                                        <button class="btn grey-bg dropdown-toggle" type="button" id="dropdownWeekButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                          
+                                                        </button>
+                                                        <div class="dropdown-menu week-menu" aria-labelledby="dropdownWeekButton">
+                                                          <a class="dropdown-item" href="#">Week1</a>
+                                                          <a class="dropdown-item" href="#">Week2</a>
+                                                          <a class="dropdown-item" href="#">Week3</a>
+                                                          <a class="dropdown-item" href="#">Week4</a>
+                                                          <a class="dropdown-item" href="#">Week5</a>
+                                                         
+                                                        </div>
+                                                </div>
+                                                <div class="dropdown scheduler-filters ml-5">
+                                                        <button class="btn grey-bg dropdown-toggle" type="button" id="dropdownMonthButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                          Month
+                                                        </button>
+                                                        <div class="dropdown-menu month-menu" aria-labelledby="dropdownMonthButton">
+                                                          <a class="dropdown-item" href="#">January</a>
+                                                          <a class="dropdown-item" href="#">February</a>
+                                                          <a class="dropdown-item" href="#">March</a>
+                                                          <a class="dropdown-item" href="#">April</a>
+                                                          <a class="dropdown-item" href="#">May</a>
+                                                          <a class="dropdown-item" href="#">June</a>
+                                                          <a class="dropdown-item" href="#">July</a>
+                                                          <a class="dropdown-item" href="#">August</a>
+                                                          <a class="dropdown-item" href="#">September</a>
+                                                          <a class="dropdown-item" href="#">October</a>
+                                                         
+                                                        </div>
+                                                </div>
+                                            
+                                                <div class="visual margin-visual-top margin-visual">
+                                                   
+                                                </div>
+                                                <div class="dropdown scheduler-filters ml-5">
+                                                        <button class="btn red-bg " type="button" id="notifyFarmers"  aria-haspopup="true" aria-expanded="false">
+                                                          Notify Farmers
+                                                        </button>
+                                                </div>
+                                        </div>
                                 </div>
                             </div>
                     </div>  
-            </nav>
+            </div>
+        </div>    
     </section>
-    
+    <section class="container-fluid mt-3 ml-8 p-0  w-95">  
+        <div class="card-title mb-0">
+            <div class="d-flex row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 mb-xl-0">
+                            <div class="card-title">
+                                <div class="d-flex row">
+                                        <div class="col-10 pr-0 mt-4">
+                                                <h6 class="text-dark ml-4 font-weight-bold week-heading">Current Week</h6>
+                                        </div>
+                                </div>
+                                <div class="d-flex-row">     
+                                        <div class="card-title mb-0">
+                                                <div class="d-flex row">
+                                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-4 mb-xl-0 ml-5">
+                                                                <div class="card-title grey-bg">
+                                                                    <div class="d-flex row">
+                                                                            <div class="col-10 pr-0 mt-4 ml-4">
+                                                                                    <h6 class="text-dark font-weight-bold">Number of VWh required</h6>
+                                                                                    <div class="h4 font-weight-bold red-text">
+                                                                                        2000
+                                                                                    </div>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>  
+                                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-4 mb-xl-0 ml-5">
+                                                                <div class="card-title grey-bg">
+                                                                    <div class="d-flex row">
+                                                                            <div class="col-10 pr-0 mt-4 ml-4">
+                                                                                    <h6 class="text-dark font-weight-bold">Peek Hour Schedule Percentage</h6>
+                                                                                    <div class="h4 font-weight-bold red-text">
+                                                                                        30%
+                                                                                    </div>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>  
+                                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-4 mb-xl-0 ml-5">
+                                                                <div class="card-title grey-bg">
+                                                                    <div class="d-flex row">
+                                                                            <div class="col-10 pr-0 mt-4 ml-4">
+                                                                                    <h6 class="text-dark font-weight-bold">Non Peek Hour Schedule Percentage</h6>
+                                                                                    <div class="h4 font-weight-bold red-text">
+                                                                                        70%
+                                                                                    </div>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>         
+                                                </div>
+                                        </div>     
+                                   </div>
+                                <div class="d-flex row">
+                                        <div class="col-10 pr-0 mt-4">
+                                                <h6 class="text-dark ml-4 font-weight-bold week-heading">Previous Week</h6>
+                                        </div>
+                                </div>
+                                <div class="d-flex-row">         
+                                        <div class="card-title mb-0">
+                                                <div class="d-flex row">
+                                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 mb-4 mb-xl-0 ml-5">
+                                                                <div class="card-title grey-bg">
+                                                                    <div class="d-flex row">
+                                                                            <div class="col-10 pr-0 mt-4 ml-4">
+                                                                                    <h6 class="text-dark font-weight-bold">Number of VWh Shoratage</h6>
+                                                                                    <div class="h4 font-weight-bold red-text">
+                                                                                        200
+                                                                                    </div>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>          
+                                                </div>
+                                        </div>   
+                                   </div>
+                            </div>
+                    </div>        
+            </div>
+        </div>    
+    </section>   
 {% endblock %}
