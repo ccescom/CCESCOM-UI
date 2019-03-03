@@ -7,35 +7,35 @@
 {% block summary_active %} active {% endblock %}
 
 {% block body %}
-    <section class="container-fluid mt-3 ml-8 p-0 position-fixed w-95">
+    <section class="container-fluid mt-3 ml-8 p-0  w-95">
             <div class="card-title mb-0">
-                    <div class="d-flex row">
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-4 mb-xl-0">
+                    <div class="d-flex row mt-4">
+                            <div class="col-6  mb-4 mb-xl-0">
                                     <div class="card-title">
                                         <div class="d-flex row">
-                                                <div class="col-2 pr-0 text-center mt-2">
-                                                        <img src="static/img/water-filter.png">
+                                                <div class="col-2 pr-0 text-center mt-2 ml-2">
+                                                        <img src="/static/img/farmer-icon.png">
                                                 </div>
-                                                <div class="col-10 pr-0 mt-4">
+                                                <div class="col-8 pr-0 mt-4">
                                                         <h6 class="text-dark font-weight-bold">Number of Farmers in the Sector</h6>
                                                         <div class="h4 font-weight-bold">
-                                                            1200
+                                                            {{ number_of_farmers }}
                                                         </div>
                                                 </div>
                                         </div>
                                     </div>
                                     
                             </div>  
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-4 mb-xl-0">
+                            <div class="col-6 float-right mb-4 mb-xl-0">
                                     <div class="card-title">
                                         <div class="d-flex row">
-                                                <div class="col-2 pr-0 text-center mt-2">
-                                                        <img src="static/img/water-filter.png">
+                                                <div class="col-2 pr-0 text-center mt-2 ml-2">
+                                                        <img src="/static/img/crop-icon.png">
                                                 </div>
-                                                <div class="col-10 pr-0 mt-4">
+                                                <div class="col-8 pr-0 mt-4">
                                                         <h6 class="text-dark font-weight-bold">Number of Agriculture Feeder Line in the Sector</h6>
                                                         <div class="h4 font-weight-bold">
-                                                            10
+                                                            {{ number_of_feeders }}
                                                         </div>
                                                 </div>
                                         </div>
@@ -44,4 +44,125 @@
                     </div>
             </div>    
     </section>
+    <section class="container-fluid mt-5 ml-8 p-0 w-95">
+        <div class="card-title mb-0">
+                <div class="d-flex row">
+                        <div class="col-12">
+                                <div class="card-title">
+                                        <div class="d-flex row">
+                                                <div class="col-10 pr-0 mt-4">
+                                                        <h6 class="text-dark ml-4 font-weight-bold week-heading">Farmers List -- <span class="region">{{ region }}</span></h6>
+                                                </div>
+                                        </div>
+                                        <div class="d-flex row">
+                                                <div class="col-12 pr-0 mt-5 ml-4">
+                                                                <table class="table table-fixed ml-5">
+                                                                                <thead>
+                                                                                  <tr class="t-row">
+                                                                                    <th >Farmer Name</th>
+                                                                                    <th >Feeder Line</th>
+                                                                                    <th >Mobile Number</th>
+                                                                                    <th >Current Crop</th>
+                                                                                    <th >Land Size</th>
+                                                                                    <th >Pump (HP)</th>
+                                                                                    <td class="action">A</td>
+                                                                                  </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                        {% for farmer in farmers_data %}
+                                                                                                <tr>
+                                                                                                        <td class="col-xs-2">{{ farmer.farmername }}</td>
+                                                                                                        <td class="col-xs-8">{{ farmer.feederline }}</td>
+                                                                                                        <td class="col-xs-8">{{ farmer.mobilenumber }}</td>
+                                                                                                        <td class="col-xs-8">{{ farmer.currentcrop }} </td>
+                                                                                                        <td class="col-xs-2">{{ farmer.landsize }}(Acres)</td>
+                                                                                                        <td class="col-xs-2">{{ farmer.pump }}</td>
+                                                                                                        <td id="{{ farmer.farmerid }}">
+                                                                                                                
+                                                                                                        </td>
+                                                                                                </tr>
+                                                                                        {% endfor %}
+                                                                                 
+                                                                                </tbody>
+                                                                              </table>
+                                                       
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </section>
+    <section class="container-fluid mt-5 ml-8 p-0 w-95">
+                <div class="card-title mb-0">
+                        <div class="d-flex row">
+                                <div class="col-12">
+                                        <div class="card-title">
+                                                <div class="d-flex row">
+                                                        <div class="col-10 pr-0 mt-4">
+                                                                <h6 class="text-dark ml-4 font-weight-bold week-heading">Feeder List  -- <span class="region">{{ region }}</span></h6>
+                                                        </div>
+                                                </div>
+                                                <div class="d-flex row">
+                                                        <div class="col-6 pr-0 mt-5 ml-4">
+                                                                        <table class="table table-fixed ml-5">
+                                                                                        <thead>
+                                                                                          <tr class="t-row">
+                                                                                            <th >Feeder Name (ID)</th>
+                                                                                            <th >Type</th>
+                                                                                          </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                                {% for feeder in feeder_data %}
+                                                                                                        <tr>
+                                                                                                                <td class="col-xs-2">{{ feeder.feederline }}</td>
+                                                                                                                <td class="col-xs-8">{{ feeder.type }}</td>
+                                                                                                               
+                                                                                                        </tr>
+                                                                                                {% endfor %}
+                                                                                          
+                                                                                        </tbody>
+                                                                                      </table>
+                                                               
+                                                        </div>
+                                                        <div class="col-4 pr-0 mt-5">
+                                                                        <div class="card-title mb-0">
+                                                                                <div class="d-flex row mt-4">
+                                                                                        <div class="col-10 pr-0 mt-4">
+                                                                                                   <h6 class="text-dark ml-4 font-weight-bold week-heading">Add Feeder Line</h6>
+                                                                                        </div>
+                                                                                        
+                                                                                </div>
+                                                                                <div class="d-flex row mt-2">
+                                                                                        <div class="col-6 pr-0 mt-4">
+                                                                                                        <h6 class="text-dark ml-4 form-text">Enter the name ID</h6>
+                                                                                        </div>    
+                                                                                      
+                                                                                        <div class="col-6 pr-0 mt-4">
+                                                                                                <input type="text" class="letter-spacing-1 feeder_line  font-size24 " />
+                                                                                        </div>
+                                                                                </div>
+
+                                                                                <div class="d-flex row mt-2">
+                                                                                                <div class="col-6 pr-0 mt-4">
+                                                                                                        <h6 class="text-dark ml-4 form-text">Type</h6>
+                                                                                                </div>    
+                                                                                                
+                                                                                                <div class="col-6 pr-0 mt-4">
+                                                                                                        <input type="text" class="letter-spacing-1 feeder_type  font-size24 " />
+                                                                                                </div>
+                                                                                </div>
+                                                                                <div class="d-flex row mt-2">
+                                                                                                <button class="btn red-bg float-right ml-5 " id="addfeeder" type="button"   aria-haspopup="true" aria-expanded="false">
+                                                                                                  Add Feeder Lines
+                                                                                                </button>
+                                                                                </div>
+                                                                        </div>      
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+            </section>
 {% endblock %}

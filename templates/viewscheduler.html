@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body_class %}summary-page{% endblock %}
+{% block login_show %}menu-display{% endblock %}
+{% block menu_show %}navbar-collapse{% endblock %}
+{% block cc_logo %}static/img/microsoft-logo.svg{% endblock %}
+{% block view_scheduler_active %} active {% endblock %}
+
+{% block body %}
+
+    <section class="container-fluid mt-3 ml-8 p-0  w-95">  
+        <div class="card-title mb-0">
+            <div class="d-flex row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 mb-xl-0">
+                            <div class="card-title">
+                                <div class="d-flex row">
+                                        <div class="col-4 pr-0 mt-4">
+                                                <h6 class="text-dark ml-4 font-weight-bold week-heading">View Schedule</h6>
+                                        </div>
+                                        <div class="col-3 pr-0 mt-4">
+                                                <h5 class="text-dark ml-4 font-weight-bold peak-time">Peak Time Starts in ------ <span class="peak-timer" style='color:#000'></span></h5>
+                                        </div>
+                                        <div class="col-3 pr-0 ">
+                                                <div class="dropdown scheduler-filters ml-5">
+                                                        <button class="btn grey-bg dropdown-toggle" type="button" id="dropdownFeederButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                          {{feeder_data[0].feederline}}
+                                                        </button>
+                                                        <div class="dropdown-menu year-menu" aria-labelledby="dropdownFeederButton">
+                                                            {% for feeder in feeder_data  %}
+                                                                <a class="dropdown-item" href="#">{{ feeder.feederline}}</a>
+                                                            {% endfor %}
+                                                                                         
+                                                        </div>
+                                                </div>
+                                                
+                                        </div>
+                                </div>
+                               
+                            </div>
+                    </div>        
+            </div>
+            <div class="d-flex row mt-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 mb-xl-0">
+                            <div class="card-title">
+                                <div class="d-flex row">
+                                    <div class="simulation"></div>
+                                </div>
+                               
+                            </div>
+                    </div>        
+            </div>
+        </div>    
+    </section>   
+{% endblock %}

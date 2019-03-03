@@ -12,7 +12,7 @@
     <body class="{% block body_class %}{% endblock %} vh-100">
             <nav class="navbar navbar-expand-lg bg-color-main pr-4 z-index-999">
                     <a class="navbar-brand flex-column" href="{{ url_for('index') }}">
-                      <img  height="50" src="static/img/cc.png" alt="CC logo" />
+                      <img  height="50" src="/static/img/cc.png" alt="CC logo" />
                     </a>
                     <div class="{% block region_show %} {% endblock %} form-group d-flex mb-0">
                             
@@ -23,20 +23,19 @@
                     <div class="{% block menu_show %} {% endblock %} collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav ml-auto h4 mr-5">
                         <li class="nav-item  font-lato pr-5">
-                          <a class="nav-link {% block summary_active %} {% endblock %} nav-text letter-spacing-1 font-lato font-size16" href="/summary">Summary<span class="sr-only">(current)</span></a>
+                          <a class="nav-link {% block summary_active %} {% endblock %} nav-text letter-spacing-1 font-lato font-size16" href="/summary/Jaipur">Summary<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  font-lato pr-5">
+                            <a class="nav-link {% block view_scheduler_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="/viewscheduler">View Scheduler</a>
                         </li>
                         <li class="nav-item  font-lato pr-5">
                           <a class="nav-link {% block scheduler_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="/scheduler">Electricity Scheduler</a>
                         </li>
-                        <li class="nav-item  font-lato pr-5">
-                          <a class="nav-link {% block configuration_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="">Configuration</a>
-                        </li>
-                        <li class="nav-item font-lato pr-5">
-                            <a class="nav-link {% block request_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="">Farmers Request</a>
-                        </li>
+                       
                         <li class="nav-item  font-lato">
-                                <a class="nav-link {% block analysis_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="">Analysis</a>
-                            </li>
+                          <a class="nav-link {% block configuration_active %} {% endblock %} nav-text letter-spacing-1  font-size16" href="/configuration">Configuration</a>
+                        </li>
+                        
                       </ul>
                     </div>
                     <div class="{% block login_show %} {% endblock %} collapse" id="navbarSupportedContent">
@@ -45,16 +44,16 @@
                                 <span class="nav-link nav-text letter-spacing-1 font-lato font-size16 ">User ID</span>
                               </li>
                               <li class="nav-item font-lato pr-2">
-                                <input type="text" class="login-input letter-spacing-1  font-size16 " />
+                                <input type="text" class="login-input letter-spacing-1  font-size16  " id="userid" />
                               </li>
                               <li class="nav-item font-lato pr-2">
                                 <span class="nav-link nav-text letter-spacing-1 font-size16 ">Password</span>
                               </li>
                               <li class="nav-item font-lato pr-5">
-                                    <input type="password" class="login-input letter-spacing-1  font-size16 " />
+                                    <input type="password" class="login-input letter-spacing-1  font-size16" id="password" />
                               </li>
                               <li class="nav-item font-lato">
-                                      <button class="login-button letter-spacing-1  font-size16" onclick="login()">Login</button>
+                                      <button class="login-button letter-spacing-1  font-size16">Login</button>
                                   </li>
                             </ul>
                     </div>        

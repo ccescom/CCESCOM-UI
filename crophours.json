@@ -1,0 +1,16 @@
+{
+    "crophours":[
+        {
+            "crop_name": "Ragi",
+            "hours_required": 6
+        },
+        {
+            "crop_name": "Rice",
+            "hours_required": 5
+        },
+        {
+            "crop_name": "Barley",
+            "hours_required": 4
+        }
+    ]
+}
